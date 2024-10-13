@@ -16,7 +16,7 @@ const server = https.createServer(options, (req, res) => {
 
     // Bestimme den Content-Type basierend auf der Dateiendung
     const extname = path.extname(filePath);
-    let contentType = 'text/html'; // Standardmäßig HTML
+    let contentType = 'text/html';
 
     switch (extname) {
         case '.js':

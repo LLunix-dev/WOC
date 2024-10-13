@@ -9,7 +9,7 @@ const options = {
     cert: fs.readFileSync('/etc/letsencrypt/live/llunix-web.westeurope.cloudapp.azure.com/fullchain.pem')
 };
 
-// HTTPS-Server auf Port 443 erstellen
+// HTTPS-Server erstellen
 const server = https.createServer(options, (req, res) => {
     // Bestimme den Pfad zur angeforderten Datei
     let filePath = path.join(__dirname, 'public', req.url === '/' ? 'index.html' : req.url);

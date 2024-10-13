@@ -14,7 +14,7 @@ const server = https.createServer(options, (req, res) => {
     // Bestimme den Pfad zur angeforderten Datei
     let filePath = path.join(__dirname, 'public', req.url === '/' ? 'index.html' : req.url);
 
-    // Bestimme den Content-Type basierend auf der Dateiendung
+
     const extname = path.extname(filePath);
     let contentType = 'text/html';
 
